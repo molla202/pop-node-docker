@@ -1,8 +1,15 @@
 #!/bin/bash
 
-export POP_CONFIG_PATH=/root/pipe/config.json
+CONFIG_FILE=/root/pipe/config.json
 
 echo "Starting POP node with config:"
-cat $POP_CONFIG_PATH
+cat $CONFIG_FILE
 
+# MUTLAKA export et
+export POP_CONFIG_PATH=$CONFIG_FILE
+
+# İstersen önce validasyon yap
+/usr/local/bin/pop --validate-config
+
+# Başlat
 /usr/local/bin/pop
