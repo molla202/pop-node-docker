@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  pop-node:
+    build: .
+    container_name: pop-node
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./pipe/config.json:/root/pipe/config.json
+      - ./pipe/logs:/root/pipe/logs
+    healthcheck:
+      test: ["CMD-SHELL", "curl --fail http://localhost/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
