@@ -1,6 +1,7 @@
 {
   "pop_name": "your-pop-name",
   "pop_location": "Your Location, Country",
+  "invite_code": "kodunuzu_yazınız",
   "server": {
     "host": "0.0.0.0",
     "port": 443,
@@ -26,6 +27,5 @@
     "discord": "your_discord_username",
     "telegram": "your_telegram_handle",
     "solana_pubkey": "YOUR_SOLANA_WALLET_ADDRESS_FOR_REWARDS"
-    "invite_code": "kodunuzu_yazınız"
   }
 }
