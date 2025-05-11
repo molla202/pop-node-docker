@@ -4,15 +4,14 @@ services:
   pop-node:
     build: .
     container_name: pop-node
-    restart: unless-stopped
+    restart: always
     ports:
-      - "80:80"
       - "443:443"
+      - "80:80"
     volumes:
-      - ./pipe/config.json:/root/pipe/config.json
-      - ./pipe/logs:/root/pipe/logs
+      - ./pipe/config.json:/root/pipe/config.json:ro
     healthcheck:
-      test: ["CMD-SHELL", "curl --fail http://localhost/health || exit 1"]
+      test: ["CMD", "curl", "--fail", "http://localhost/health"]
       interval: 30s
       timeout: 10s
       retries: 5
