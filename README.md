@@ -3,7 +3,7 @@
 git clone https://github.com/molla202/pop-node-docker.git
 cd pop-node-docker
 ```
-NOT: docker-compose.yml içerisinde POP_INVITE_CODE=YOUR_INVITE_CODE_HERE buraya mailde gelen kodu yazıp kaydedin. ctrl xy enter
+NOT: docker-compose.yml içerisinde `POP_INVITE_CODE=YOUR_INVITE_CODE_HERE` buraya mailde gelen kodu yazıp kaydedin. ctrl xy enter
 ```
 nano docker-compose.yml
 ```
