@@ -7,6 +7,12 @@ NOT: docker-compose.yml içerisinde `POP_INVITE_CODE=YOUR_INVITE_CODE_HERE` bura
 ```
 nano docker-compose.yml
 ```
+NOT: config içeriğini düzenlememiz gerekli
+
+```
+nano $HOME/pop-node-docker/pipe/config.json
+```
+
 # İmajı ve containerı başlat
 ```
 docker-compose up -d
