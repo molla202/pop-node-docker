@@ -9,7 +9,7 @@ cat $CONFIG_FILE
 export POP_CONFIG_PATH=$CONFIG_FILE
 
 # İstersen önce validasyon yap
-/usr/local/bin/pop --validate-config
+/usr/local/bin/pop
 
 # Başlat
 /usr/local/bin/pop
