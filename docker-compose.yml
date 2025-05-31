@@ -13,6 +13,7 @@ services:
       - "80:80"
     volumes:
       - ./pipe:/root/pipe
+      - ./start.sh:/start.sh
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost/health"]
       interval: 30s
