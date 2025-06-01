@@ -12,8 +12,8 @@ services:
       - "443:443"
       - "80:80"
     volumes:
-      - ./pipe:/root/pipe
-      - ./start.sh:/start.sh
+      - ./start.sh:/start.sh:ro             # start.sh dışarıdan alınacak
+      - ./pipe:/root/pipe:ro                # config.json ve pop dışarıdan okunacak
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost/health"]
       interval: 30s
