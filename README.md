@@ -12,7 +12,13 @@ NOT: config içeriğini düzenlememiz gerekli
 ```
 nano $HOME/pop-node-docker/pipe/config.json
 ```
-
+```
+cd
+cd pop-node-docker
+wget https://download.pipe.network/static/pop-v0.3.1-linux-x64.tar.gz
+tar -xzf pop-v0.3.1-linux-x64.tar.gz
+mv pop ./pipe/pop
+```
 # İmajı ve containerı başlat
 ```
 docker-compose up -d
