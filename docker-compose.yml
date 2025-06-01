@@ -14,7 +14,6 @@ services:
      - ./start.sh:/start.sh:rw
     environment:
       - POP_CONFIG_PATH=/root/pipe/config.json
-      - POP_INVITE_CODE=yaz
     entrypoint: ["/bin/bash", "/start.sh"]
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost/health"]
