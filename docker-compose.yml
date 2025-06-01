@@ -9,8 +9,8 @@ services:
       - "443:443"
       - "80:80"
     volumes:
-      - ./start.sh:/start.sh:ro             # start.sh dışarıdan alınacak
-      - ./pipe:/root/pipe:ro                # config.json ve pop dışarıdan okunacak
+     - ./pipe:/root/pipe:rw
+     - ./pipe/cache:/root/pipe/cache:rw
     environment:
       - POP_CONFIG_PATH=/root/pipe/config.json
       - POP_INVITE_CODE=yaz
