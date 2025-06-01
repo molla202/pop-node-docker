@@ -11,6 +11,7 @@ services:
     volumes:
      - ./pipe:/root/pipe:rw
      - ./pipe/cache:/root/pipe/cache:rw
+     - ./start.sh:/start.sh:rw
     environment:
       - POP_CONFIG_PATH=/root/pipe/config.json
       - POP_INVITE_CODE=yaz
