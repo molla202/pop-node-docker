@@ -18,6 +18,8 @@ cd pop-node-docker
 wget https://download.pipe.network/static/pop-v0.3.1-linux-x64.tar.gz
 tar -xzf pop-v0.3.1-linux-x64.tar.gz
 mv pop ./pipe/pop
+chmod +x start.sh
+chmod +x pipe/pop
 ```
 # İmajı ve containerı başlat
 ```
