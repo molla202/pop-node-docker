@@ -13,7 +13,7 @@ services:
       - ./pipe:/root/pipe:ro                # config.json ve pop dışarıdan okunacak
     environment:
       - POP_CONFIG_PATH=/root/pipe/config.json
-      - POP_INVITE_CODE=rEjdcTPX8tEl
+      - POP_INVITE_CODE=yaz
     entrypoint: ["/bin/bash", "/start.sh"]
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost/health"]
