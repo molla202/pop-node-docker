@@ -2,9 +2,6 @@ version: '3.9'
 
 services:
   pop-node:
-    environment:
-     - POP_CONFIG_PATH=/root/pipe/config.json
-     - POP_INVITE_CODE=YOUR_INVITE_CODE_HERE
     build: .
     container_name: pop-node
     restart: always
@@ -14,6 +11,10 @@ services:
     volumes:
       - ./start.sh:/start.sh:ro             # start.sh dışarıdan alınacak
       - ./pipe:/root/pipe:ro                # config.json ve pop dışarıdan okunacak
+    environment:
+      - POP_CONFIG_PATH=/root/pipe/config.json
+      - POP_INVITE_CODE=rEjdcTPX8tEl
+    entrypoint: ["/bin/bash", "/start.sh"]
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost/health"]
       interval: 30s
